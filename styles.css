@@ -4,6 +4,12 @@ html {
     --color-grey-600: rgb(58,58,58);
     --color-grey-900: rgb(41, 41, 41);
 
+    --color-primary-300: rgb(167,226,255); 
+    --color-primary-700: rgb(0,170,255);
+
+    --size-1: 1rem;
+    --size-5: 3rem;
+
     background-color: var(--color-grey-100);
     font-family: 'Krub', sans-serif;
     font-weight: 400;
@@ -15,6 +21,14 @@ html {
     width: 350px;
     margin: 50px auto;
     box-shadow: 3px 3px 10px rgb(201, 200, 200);
+
+    /* transition */
+    transition: transform .5s ease-out 0s;
+  }
+
+  .card-container:hover{
+    transform: scale(1.1);
+    /*transform: rotate(360deg);*/
   }
   
   h1 {
@@ -35,10 +49,10 @@ html {
   
   .price {
     color: var(--color-grey-900);
-    background-color: rgb(167, 226, 255);
+    background-color: var(--color-primary-300);
     text-align: center;
     margin: 30px auto 10px auto;
-    font-size: 50px;
+    font-size: var(--size-5);
     font-weight: 600;
   }
   
@@ -60,7 +74,7 @@ html {
   
   .icon {
     display: flex;
-    width: 10px;
+    width: 18px;
   }
   
   .sub-feature-text {
@@ -83,12 +97,13 @@ html {
     padding: 10px;
     margin: 0 0 30px 0;
     border: 2px solid rgb(224, 224, 224);
-    font-size: 18px;
+    font-size: var(--size-1);
     font-weight: 600;
+    transition: background-color .75s ease-out;
   }
   
   .button:hover {
     color: white;
-    background-color: rgb(0, 170, 255);
+    background-color: var(--color-primary-700);
     border: 2px solid rgb(255, 255, 255);
   }
